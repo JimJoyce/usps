@@ -42,6 +42,7 @@ module USPS::Request
           # builder.tag!('Value', package.value)
           # builder.tag!('ShipDate', package.ship_date)
           builder.tag!('Container', '')
+          builder.tag!('Machinable', false)
           # builder.tag!('Width', package.width)
           # builder.tag!('Length', package.lenght)
           # builder.tag!('Height', package.height)
