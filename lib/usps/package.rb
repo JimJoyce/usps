@@ -1,23 +1,23 @@
-class USPS::Package < Struct.new(
-  :service,
-  :zip_origin,
-  :zip_destination,
-  :pounds,
-  :ounces,
-  :container,
-  :width,
-  :length,
-  :height,
-  :girth,
-  :value,
-  :ship_date
-)
+class USPS::Package
+
+attr_accessor :service,
+              :zip_origin,
+              :zip_destination,
+              :pounds,
+              :ounces,
+              :container,
+              :width,
+              :length,
+              :height,
+              :girth,
+              :value,
+              :ship_date
 
 
 SERVICE_TYPES = ['FIRST CLASS', 'PRIORITY', 'ALL']
 
 def initialize(*opts)
-  opts.each do |attr, value|
+  opts.shift.each do |attr, value|
     attr.send("#{attr}=", value)
   end
 end
