@@ -40,16 +40,16 @@ module USPS::Request
       super do |builder|
 
         builder.tag!('Package', ID: '1ST') do
-          builder.tag!('ZipOrigination', from_zip)
-          builder.tag!('ZipDestination', to_zip)
-          builder.tag!('Pounds', pounds)
-          builder.tag!('Ounces', ounces)
+          builder.tag!('ZipOrigination', @from_zip)
+          builder.tag!('ZipDestination', @to_zip)
+          builder.tag!('Pounds', @pounds)
+          builder.tag!('Ounces', @ounces)
           builder.tag!('Container')
           builder.tag!('Size', 'REGULAR')
-          builder.tag!('Width', width)
-          builder.tag!('Length', length)
-          builder.tag!('Height', height)
-          builder.tag!('Girth', girth)
+          builder.tag!('Width', @width)
+          builder.tag!('Length', @length)
+          builder.tag!('Height', @height)
+          builder.tag!('Girth', @girth)
         end
 
       end
