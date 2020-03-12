@@ -18,7 +18,7 @@ SERVICE_TYPES = ['FIRST CLASS', 'PRIORITY', 'ALL']
 
 def initialize(*opts)
   opts.shift.each do |attr, value|
-    attr.send("#{attr}=", value)
+    send("#{attr.to_s}=", value)
   end
 end
 
