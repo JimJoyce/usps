@@ -47,7 +47,7 @@ module USPS::Request
           builder.tag!('Container')
           builder.tag!('Size', 'REGULAR')
           builder.tag!('Width', @width)
-          builder.tag!('Length', @length)
+          builder.tag!('Length', @lenght)
           builder.tag!('Height', @height)
           builder.tag!('Girth', @girth)
         end
