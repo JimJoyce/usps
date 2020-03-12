@@ -32,7 +32,7 @@ end
   def self.build_random
     # width/length/height are optional, but if you provide one of them then they all become required
     new(
-      service: SERVICE_TYPES.sample,
+      service: 'ALL',
       zip_origin: 60559,
       zip_destination: 60622,
       pounds: rand(30..70), # no more than 70 lbs
