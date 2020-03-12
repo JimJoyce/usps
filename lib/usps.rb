@@ -7,6 +7,7 @@ module USPS
 
   autoload :Client,        'usps/client'
   autoload :Address,       'usps/address'
+  autoload :Package,       'usps/package'
   autoload :Request,       'usps/request'
   autoload :VERSION,       'usps/version'
   autoload :Response,      'usps/response'

@@ -21,18 +21,12 @@ module USPS::Request
 #     <Girth>10</Girth>
 #     <Machinable>false</Machinable>
 #  </Package>
+  attr_reader :package
 
     # The USPS api is only capable of handling at most 5 zip codes per request.
-    def initialize(from_zip, to_zip, pounds, ounces, package_size, width, lenght, height, girth)
-      @from_zip = from_zip 
-      @to_zip = to_zip 
-      @pounds = pounds 
-      @ounces = ounces 
-      @package_size = package_size 
-      @width = width 
-      @lenght = lenght 
-      @height = height 
-      @girth = girth
+    def initialize(package)
+      @package = package
+      # from_zip, to_zip, pounds, ounces, package_size, width, lenght, height, girth
     end
 
     def build
@@ -40,16 +34,17 @@ module USPS::Request
       super do |builder|
 
         builder.tag!('Package', ID: '1ST') do
-          builder.tag!('ZipOrigination', @from_zip)
-          builder.tag!('ZipDestination', @to_zip)
-          builder.tag!('Pounds', @pounds)
-          builder.tag!('Ounces', @ounces)
-          builder.tag!('Container')
-          builder.tag!('Size', 'REGULAR')
-          builder.tag!('Width', @width)
-          builder.tag!('Length', @lenght)
-          builder.tag!('Height', @height)
-          builder.tag!('Girth', @girth)
+          builder.tag!('Service', package.service)
+          builder.tag!('ZipOrigination', package.zip_origin)
+          builder.tag!('ZipDestination', package.zip_destination)
+          builder.tag!('Pounds', package.pounds)
+          builder.tag!('Ounces', package.ounces)
+          builder.tag!('Value', package.value)
+          # builder.tag!('Container')
+          builder.tag!('Width', package.width)
+          builder.tag!('Length', package.lenght)
+          builder.tag!('Height', package.height)
+          builder.tag!('Girth', package.girth)
         end
 
       end
