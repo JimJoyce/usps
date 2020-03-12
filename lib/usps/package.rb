@@ -35,7 +35,7 @@ end
       service: SERVICE_TYPES.sample,
       zip_origin: 60559,
       zip_destination: 60622,
-      pounds: rand(30..150),
+      pounds: rand(30..70), # no more than 70 lbs
       ounces: rand(4..10),
       ship_date: (Date.today..Date.today + 30).to_a.sample.strftime('%Y-%m-%d'),
       value: rand(50..250)
