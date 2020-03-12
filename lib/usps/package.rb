@@ -37,7 +37,8 @@ end
       zip_destination: 60622,
       pounds: rand(30..150),
       ounces: rand(4..10),
-      ship_date: (Date.today..Date.today + 30).to_a.sample.strftime('%Y-%m-%d')
+      ship_date: (Date.today..Date.today + 30).to_a.sample.strftime('%Y-%m-%d'),
+      value: rand(50..250)
     )
   end
 

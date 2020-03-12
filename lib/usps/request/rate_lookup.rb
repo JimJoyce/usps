@@ -40,11 +40,12 @@ module USPS::Request
           builder.tag!('Pounds', package.pounds)
           builder.tag!('Ounces', package.ounces)
           builder.tag!('Value', package.value)
+          builder.tag!('ShipDate', package.ship_date)
           # builder.tag!('Container')
-          builder.tag!('Width', package.width)
-          builder.tag!('Length', package.lenght)
-          builder.tag!('Height', package.height)
-          builder.tag!('Girth', package.girth)
+          # builder.tag!('Width', package.width)
+          # builder.tag!('Length', package.lenght)
+          # builder.tag!('Height', package.height)
+          # builder.tag!('Girth', package.girth)
         end
 
       end
