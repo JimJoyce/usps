@@ -5,4 +5,5 @@ module USPS::Response
   autoload :AddressStandardization, 'usps/response/address_standardization'
   autoload :TrackingLookup,         'usps/response/tracking_lookup'
   autoload :TrackingFieldLookup,    'usps/response/tracking_field_lookup'
+  autoload :RateLookup,    'usps/response/rate_lookup'
 end
