@@ -37,16 +37,18 @@ module USPS::Request
           builder.tag!('Service', package.service)
           builder.tag!('ZipOrigination', package.zip_origin)
           builder.tag!('ZipDestination', package.zip_destination)
-          builder.tag!('Pounds', package.pounds)
-          builder.tag!('Ounces', package.ounces)
-          # builder.tag!('Value', package.value)
-          # builder.tag!('ShipDate', package.ship_date)
           builder.tag!('Container', '')
           builder.tag!('Machinable', false)
-          # builder.tag!('Width', package.width)
-          # builder.tag!('Length', package.lenght)
-          # builder.tag!('Height', package.height)
-          # builder.tag!('Girth', package.girth)
+          
+          builder.tag!('Pounds', package.pounds) unless package.pounds.nil?
+          builder.tag!('Ounces', package.ounces) unless package.ounces.nil?
+          builder.tag!('ShipDate', package.ship_date) unless package.ship_date.nil?
+          builder.tag!('Width', package.width)  unless package.width.nil?
+          builder.tag!('Length', package.lenght)  unless package.length.nil?
+          builder.tag!('Height', package.height)  unless package.height.nil?
+          builder.tag!('Girth', package.girth)  unless package.girth.nil?
+          
+          # builder.tag!('Value', package.value)
         end
 
       end

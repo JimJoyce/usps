@@ -24,6 +24,7 @@ The following USPS API calls are currently exposed through this library:
 <ZipCodeLookupRequest>               -- USPS::Request::ZipCodeLookup
 <TrackRequest>                       -- USPS::Request::TrackingLookup
 <TrackFieldRequest>                  -- USPS::Request::TrackingFieldLookup
+<RateLookupRequest>                  -- USPS::Request::RateLookup
 
 <DeliveryConfirmationV3.0Request>    -- USPS::Request::DeliveryConfirmation        (for production)
 <DeliveryConfirmCertifyV3.0Request>  -- USPS::Request::DeliveryConfirmationCertify (for testing)
