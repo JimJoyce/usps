@@ -6,4 +6,5 @@ module USPS::Response
   autoload :TrackingLookup,         'usps/response/tracking_lookup'
   autoload :TrackingFieldLookup,    'usps/response/tracking_field_lookup'
   autoload :RateLookup,    'usps/response/rate_lookup'
+  autoload :LabelRequest,    'usps/response/label_request'
 end
