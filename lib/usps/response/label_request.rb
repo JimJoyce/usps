@@ -1,5 +1,5 @@
 module USPS::Response
-  class RateLookup < Base
+  class LabelRequest < Base
     attr_reader :label, :confirmation, :address, :postnet
 
     alias :confirmation_number :confirmation
