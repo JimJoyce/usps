@@ -5,7 +5,8 @@ module USPS::Request
       :api => 'eVS',
       :tag => 'eVSRequest',
       :secure => true,
-      :response => USPS::Response::LabelRequest
+      :response => USPS::Response::LabelRequest,
+      testing: true
     )
 
     OPTIONS = [
